@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>game name</title>
+<style>body, html { margin: 0px;}</style>
+</head>
+<body>
+<canvas id="gamescreen">You’re browser does not support HTML5.</canvas>
+<script>
+function draw() {
+  var theCanvas = document.getElementById("gamescreen");
+  var ctx = theCanvas.getContext("2d");
+  ctx.canvas.width  = window.innerWidth-10;
+  ctx.canvas.height = window.innerHeight-10;
+  ctx.fillStyle = '#aaaaaa';
+  ctx.fillRect(50, 50, 200, 200);
+  ctx.fillStyle = '#000000';
+  ctx.font = '20px sans-serif';
+  ctx.textBaseline = 'top';
+  var textOut = "Height: " + ctx.canvas.height + "\n";
+  textOut += "Width: " + ctx.canvas.width + "\n";
+  ctx.fillText  (textOut, 110, 110);
+  
+  //...drawing code...
+}
+draw();
+</script>
+</body>
+</html>
