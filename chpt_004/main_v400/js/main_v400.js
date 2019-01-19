@@ -13,7 +13,7 @@ function initApp()
 	theCanvas = document.getElementById("gamescreen");
 	ctx = theCanvas.getContext("2d");
 	
-	window.addEventListener("mousemove", handleMouseMove);
+	window.addEventListener("mousemove", mouseMoveHandler);
 	window.addEventListener("resize", draw);
 	theCanvas.addEventListener("click",clickHandler);
 
@@ -78,7 +78,7 @@ function draw() {
 	
 	ctx.drawImage(tankTag,30,30);
 }
-function handleMouseMove(e)
+function mouseMoveHandler(e)
 {
 	// mousePos = {x:e.clientX,y:e.clientY}; // for later use
 /*	ctx.clearRect(45,125,150,50);

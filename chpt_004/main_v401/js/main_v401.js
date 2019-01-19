@@ -23,7 +23,7 @@ function initApp()
 	ctx.canvas.width  = window.innerWidth-5;
 	ctx.canvas.height = window.innerHeight-5;
 	
-	window.addEventListener("mousemove", handleMouseMove);
+	window.addEventListener("mousemove", mouseMoveHandler);
 	window.addEventListener("resize", draw);
 	tankTag = document.getElementById("tank");
 	// add 5 new tanks
@@ -116,7 +116,7 @@ function draw() {
 	drawAllTanks();
 	
 }
-function handleMouseMove(e)
+function mouseMoveHandler(e)
 {
 	// mousePos = {x:e.clientX,y:e.clientY}; // for later use
 /*	ctx.clearRect(45,125,150,50);

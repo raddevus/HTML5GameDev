@@ -10,7 +10,7 @@ function initApp()
 	theCanvas = document.getElementById("gamescreen");
 	ctx = theCanvas.getContext("2d");
 	
-	window.addEventListener("mousemove", handleMouseMove);
+	window.addEventListener("mousemove", mouseMoveHandler);
 	window.addEventListener("resize", draw);
 	
 
@@ -38,7 +38,7 @@ function draw() {
 
 	ctx.fillText  (textOut, 50, 50);
 }
-function handleMouseMove(e)
+function mouseMoveHandler(e)
 {
 	ctx.clearRect(45,125,150,50);
 	var textOut = "X: " + e.clientX +"\n";

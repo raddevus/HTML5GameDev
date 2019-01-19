@@ -14,7 +14,7 @@ function initApp()
 	theCanvas = document.getElementById("gamescreen");
 	ctx = theCanvas.getContext("2d");
 	
-	window.addEventListener("mousemove", handleMouseMove);
+	window.addEventListener("mousemove", mouseMoveHandler);
 	window.addEventListener("resize", draw);
 	setInterval(renderSpots, 500);
 	setInterval(eraseSpots,800);
@@ -91,7 +91,7 @@ function displayScore(){
 	ctx.strokeStyle = '#0000ff';
 	ctx.strokeRect(10,10,ctx.canvas.width-15, ctx.canvas.height-15);
 }
-function handleMouseMove(e)
+function mouseMoveHandler(e)
 {
 	var hoverItem = hitTest({x:e.clientX,y:e.clientY},allSpots);
 
